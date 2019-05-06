@@ -1,2 +1,0 @@
-876b0eb96744bc3a12ea2106d9236a139017be4f76875ac2651d9a5f9713c406  echo_0.0.1_linux_amd64.tar.gz
-a57584a74966acca7aceee1aad9d21a0c90cac7e5679c02b64d4ee9331c12d96  echo_0.0.1_linux_armv6.tar.gz
