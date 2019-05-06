@@ -6,6 +6,7 @@ import (
 	"net"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"go.uber.org/zap"
@@ -140,6 +141,9 @@ func main() {
 		if err != nil {
 			logger.Fatal("Error accepting connection.", zap.Error(err))
 		}
+
+		// set a 10 second read timeout
+		err = conn.SetDeadline(time.Now().Add(10 * time.Second))
 
 		// handle TCP request in a go routine
 		// send an initial message
